@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00156E8D2A682D9D00BCD285 /* dateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00156E8C2A682D9D00BCD285 /* dateForm.swift */; };
 		003D1D4F2A6622D80095AAAE /* calendar_tryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D1D4E2A6622D80095AAAE /* calendar_tryApp.swift */; };
 		003D1D512A6622D80095AAAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D1D502A6622D80095AAAE /* ContentView.swift */; };
 		003D1D532A6622DB0095AAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003D1D522A6622DB0095AAAE /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00156E8C2A682D9D00BCD285 /* dateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateForm.swift; sourceTree = "<group>"; };
 		003D1D4B2A6622D80095AAAE /* calendar try.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "calendar try.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		003D1D4E2A6622D80095AAAE /* calendar_tryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendar_tryApp.swift; sourceTree = "<group>"; };
 		003D1D502A6622D80095AAAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		003D1D422A6622D80095AAAE = {
 			isa = PBXGroup;
 			children = (
+				00156E8C2A682D9D00BCD285 /* dateForm.swift */,
 				003D1D4D2A6622D80095AAAE /* calendar try */,
 				003D1D4C2A6622D80095AAAE /* Products */,
 			);
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				003D1D602A66271D0095AAAE /* thirdView.swift in Sources */,
+				00156E8D2A682D9D00BCD285 /* dateForm.swift in Sources */,
 				003D1D512A6622D80095AAAE /* ContentView.swift in Sources */,
 				003D1D5E2A6625D60095AAAE /* secondView.swift in Sources */,
 				003D1D4F2A6622D80095AAAE /* calendar_tryApp.swift in Sources */,

@@ -10,17 +10,20 @@ import SwiftUI
 struct secondView: View {
     @Environment(\.calendar) var calendar
     @State var datesEnd: Set<DateComponents> = []
-
+    @State var start: String
     var body: some View {
         NavigationStack{
             VStack {
                 MultiDatePicker("Select your preferred dates", selection: $datesEnd)
+              
                 let end = summary
                //Text(summary)
-               
+                Text("your menstruation started \(start)")
+                
                 Text ("Select the menstruation end date \(end)")
-                NavigationLink(destination: thirdView(summary: .constant(""))) {
+                NavigationLink(destination: thirdView(summary: "", start: start, end: end, endDate: datesEnd)) {
                     Text("Click here to continue")
+                   
                 }
             }
             .padding()
@@ -36,6 +39,6 @@ struct secondView: View {
 
 struct secondView_Previews: PreviewProvider {
     static var previews: some View {
-        secondView()
+        secondView(start: "")
     }
 }

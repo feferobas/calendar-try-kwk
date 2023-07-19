@@ -6,20 +6,36 @@
 //
 
 import SwiftUI
-import Foundation
+//import Foundation
 struct thirdView: View {
-    @Binding var summary: String
-    let string = "01/02/2016"
-    
-    //let dateFormatter =
+    @State var summary: String
+    @State var start: String
+    @State var end : String
+    @State var endDate: Set<DateComponents>
+    var futureDateString: String
+   
     var body: some View {
-        Text("Your menstruation started: ")
+        Text("Your menstruation started: ").onAppear{
+            let date = Calendar.current.date(from: endDate.removeFirst())!
+            print(date)
+            var dateComponent = DateComponents()
+            dateComponent.day = 28
+            let futureDate = Calendar.current.date(byAdding: dateComponent, to: date)
+            print(futureDate!)
+            futureDateString = futureDate!.formatted()
+        }
+        Text(futureDateString)
         Text(summary)
+        Text(start)
+        Text(end)
+        
+      //  Text(datesEnd)
+        
     }
 }
 
 struct thirdView_Previews: PreviewProvider {
     static var previews: some View {
-        thirdView(summary: .constant(""))
+        thirdView(summary: "", start: "", end: "", endDate: Set<DateComponents>())
     }
 }

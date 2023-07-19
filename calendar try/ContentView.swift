@@ -10,14 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.calendar) var calendar
     @State var datesStart: Set<DateComponents> = []
-    var body: some View {
+       // @State var start: String
+       var body: some View {
         NavigationStack {
             VStack {
                 MultiDatePicker("Select your menstruation start:", selection: $datesStart)
                 let start = summary
+              //  self.start = summary
+             
                 Spacer()
                 Text ("Select your menstruation start date: \(start)")
-                NavigationLink(destination: secondView() ) {
+                NavigationLink(destination: secondView(start: start) ) {
                     Text("Click here to continue")
                 }
                 //Text(summary)
