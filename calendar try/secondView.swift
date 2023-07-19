@@ -18,16 +18,17 @@ struct secondView: View {
               
                 let end = summary
                //Text(summary)
-                Text("your menstruation started \(start)")
-                
-                Text ("Select the menstruation end date \(end)")
-                NavigationLink(destination: thirdView(summary: "", start: start, end: end, endDate: datesEnd)) {
-                    Text("Click here to continue")
-                   
+                //Text("your menstruation started \(start)")
+                Text ("Select the date your last menstruation ended:  \(end)")
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: thirdView(summary: "", start: start, end: end, endDate: datesEnd)) {
+                        Text(Image(systemName: "arrowshape.turn.up.right.fill"))
+                             }
+                             }
+                            .padding()
                 }
             }
-            .padding()
-        }
         
         var summary: String {
             datesEnd.compactMap { components in

@@ -13,16 +13,24 @@ struct ContentView: View {
        // @State var start: String
        var body: some View {
         NavigationStack {
+            
             VStack {
-                MultiDatePicker("Select your menstruation start:", selection: $datesStart)
+                Text("Your menstruation cycle")
+                MultiDatePicker("Select the date your last mesntruation started:", selection: $datesStart)
                 let start = summary
               //  self.start = summary
              
                 Spacer()
-                Text ("Select your menstruation start date: \(start)")
-                NavigationLink(destination: secondView(start: start) ) {
-                    Text("Click here to continue")
+                Text ("Select the date your last menstruation started:  \(start)")
+                Spacer()
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: secondView(start: start) ) {
+                        Text(                Image(systemName: "arrowshape.turn.up.right.fill")
+)
+                    } .padding()
                 }
+                Spacer()
                 //Text(summary)
                 
             }
