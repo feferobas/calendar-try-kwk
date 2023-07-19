@@ -13,7 +13,7 @@ struct thirdView: View {
     
     //let dateFormatter =
     var body: some View {
-        Text("Your menstruation started ")
+        Text("Your menstruation started: ")
         Text(summary)
     }
 }
